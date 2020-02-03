@@ -12,7 +12,7 @@ const productsDB = new Datastore({
 
 module.exports = {
   //Med följande defintioner gör vi ändringar i databasen productsDB
-  //find, findOne, insert, remove and uppdate
+  //find, findOne, insert, remove och uppdate
 
   //find hittar alla produkter
   async all() {
@@ -24,7 +24,7 @@ module.exports = {
   },
   //insert skapar ny produkt
   async insert(body) {
-    const productCreate = {
+    const productInsert = {
       _id: body.id,
       serial: body.serial,
       title: body.title,
@@ -33,7 +33,7 @@ module.exports = {
       longDesc: body.longDesc,
       imgFile: body.imgFile
     };
-    return await productsDB.insert(productCreate);
+    return await productsDB.insert(productInsert);
   },
   //trmove tar bort en produkt
   async remove(id) {

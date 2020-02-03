@@ -1,16 +1,16 @@
 const express = require("express");
 const router = express.Router();
-const Product = require("../models/products");
+const ProductModels = require("../models/products");
 
 //Returnerar en lista på samtliga produkter.
 router.get("/api/products", async (req, res) => {
-  const product = await Product.all();
+  const product = await ProductModels.all();
   res.json(product);
 });
 
 //Returnerar en enstaka produkt.
 router.get("/api/products/:id", async (req, res) => {
-  const product = await Product.create(req.params.id);
+  const product = await ProductModels.create(req.params.id);
   if (product) {
     res.json(product);
   } else {
@@ -22,9 +22,9 @@ router.get("/api/products/:id", async (req, res) => {
 //Enbart tillgänglig för Admin
 
 router.post("/api/products", async (req, res) => {
-  const post = await Product.create(req.body);
+  const post = await ProductModels.create(req.body);
   if (!post) {
-    res.json({ message: "Couldn't create post" });
+    res.json({ message: "Try again!" });
   } else {
     res.json(post);
   }
@@ -33,9 +33,9 @@ router.post("/api/products", async (req, res) => {
 //Uppdaterar produkt, se produkt-modell.
 //Enbart tillgänglig för Admin
 router.patch("/api/products/:id", async (req, res) => {
-  let post = await Product.update(req.params.id, req.body);
+  let post = await ProductModels.update(req.params.id, req.body);
   if (!post) {
-    res.json({ message: "Couldn't update " });
+    res.json({ message: "Try again! " });
   } else {
     res.json(post);
   }
@@ -45,9 +45,9 @@ router.patch("/api/products/:id", async (req, res) => {
 //Enbart tillgänglig för Admin
 
 router.delete("/api/products/:id", async (req, res) => {
-  const post = await Product.remove(req.params.id);
+  const post = await ProductModels.remove(req.params.id);
   if (!post) {
-    res.json({ message: "Product removed" });
+    res.json({ message: "Removed successfully!" });
   } else {
     res.json(post);
   }
