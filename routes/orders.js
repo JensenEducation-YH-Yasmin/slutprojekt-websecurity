@@ -15,7 +15,7 @@ router.get("/api/orders", async (req, res) => {
 router.post("/api/orders", async (req, res) => {
   const OrderJSON = await OrderModels.create(req.body);
   if (!OrderJSON) {
-    res.json({ message: "The order is not found" });
+    res.json({ message: "We can not find your order" });
   } else {
     res.json({ message: "The order created successfully" });
   }
