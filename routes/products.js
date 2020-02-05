@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const ProductModels = require("../models/products");
+const ProductModels = require("../products");
 
 //Returnerar en lista på samtliga produkter.
 router.get("/api/products", async (req, res) => {

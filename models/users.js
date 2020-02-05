@@ -9,33 +9,25 @@ const usersDB = new Datastore({
 
 module.exports = {
   async register(body) {
-    if (body.password === body.repeatPassword) {
-      const userName = await usersDB.findOne({ email: body.email });
-      if (userName) {
-        return false;
-      } else {
-        const passwordHash = await bcrypt.hash(body.password, 10);
-        const userInsert = {
-          email: body.email,
-          password: passwordHash,
-          role: "costumer",
-          name: body.name,
-          adress: {
-            street: body.adress.street,
-            zip: body.adress.zip,
-            city: body.adress.city
-          },
-          payment: {
-            cardOwner: cardOwner,
-            cardNumber: cardNumber,
-            validUntil: validUntil,
-            cvv: cvv
-          },
-          orderHistory: body.orderHistory
-        };
+    const userName = await usersDB.findOne({ email: body.email });
+    if (!userName) {
+      return false;
+    } else if (body.password === body.repeatPassword) {
+      const passwordHash = await bcrypt.hash(body.password, 10);
+      const userInsert = {
+        email: body.email,
+        password: passwordHash,
+        role: "customer",
+        name: body.name,
+        adress: {
+          street: body.adress.street,
+          zip: body.adress.zip,
+          city: body.adress.city
+        },
+        orderHistory: body.orderHistory
+      };
 
-        return await usersDB.insert(userInsert);
-      }
+      return await usersDB.insert(userInsert);
     } else {
       return false;
     }
@@ -51,21 +43,25 @@ module.exports = {
         userName.password
       );
       if (passwordCompare) {
-        const payment = {
-          token: "JWT_TOKEN",
+        const payload = {
+          userID: userName._id,
+          role: userName.role
+        };
+        const token = jwt.sign(payload, process.env.SECRET);
+        return {
+          token: token,
           user: {
-            email: user.email,
-            name: user.name,
-            role: user.role,
+            email: userName.email,
+            name: userName.name,
+            role: userName.role,
             adress: {
-              street: user.adress.street,
-              city: user.adress.city,
-              zip: user.adress.zip
-            }
+              street: userName.adress.street,
+              city: userName.adress.city,
+              zip: userName.adress.zip
+            },
+            orderHistory: userName.orderHistory
           }
         };
-        const token = jwt.sign(payload, secret);
-        return token;
       } else {
         return false;
       }
