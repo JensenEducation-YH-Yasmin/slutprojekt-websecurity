@@ -11,7 +11,7 @@
     "url": "git+https://github.com/zocom-david-lundholm/slutprojekt-websecurity.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Yasmin",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/zocom-david-lundholm/slutprojekt-websecurity/issues"
@@ -19,10 +19,13 @@
   "homepage": "https://github.com/zocom-david-lundholm/slutprojekt-websecurity#readme",
   "dependencies": {
     "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
-    "nedb": "^1.8.0",
-    "nedb-promise": "^2.0.1"
-  }
+    "nedb-promise": "^2.0.1",
+    "promise": "^8.0.3",
+    "save": "^2.4.0"
+  },
+  "devDependencies": {}
 }

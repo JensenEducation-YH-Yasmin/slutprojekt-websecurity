@@ -1,9 +1,8 @@
-{"serial":"17389167890128899","title":"hoodie fire","price":499,"shortDesc":"Unisex","longDesc":"Skate ipsum dolor sit amet...","imgFile":"hoodie-fire.png","_id":"5E5qo0y5psM4xJ71"}
-{"serial":"66786544678","title":"skate heroe","price":2999,"shortDesc":"Unisex","longDesc":"Skate ipsum dolor sit amet...","imgFile":"skate-hero-1.62da4442.jpg","_id":"6SpwHYWInGtaaViO"}
-{"serial":"173891297371277","title":"Gretas Fury","price":2999,"shortDesc":"Unisex","longDesc":"Skate ipsum dolor sit amet...","imgFile":"skateboard-greta.png","_id":"7P0SDBKdp0nKSvHu"}
-{"serial":"66899433209756","title":"skateboard generic","price":2999,"shortDesc":"Unisex","longDesc":"Skate ipsum dolor sit amet...","imgFile":"skateboard-generic.png","_id":"GtctlgZchEVb1wxH"}
-{"serial":"17389167008890","title":"wheel spinner","price":999,"shortDesc":"Unisex","longDesc":"Skate ipsum dolor sit amet...","imgFile":"wheel-spinner.png","_id":"JuqECYGKoCz0Vbdn"}
-{"serial":"17389167008890","title":"hoodie ocean","price":499,"shortDesc":"Unisex","longDesc":"Skate ipsum dolor sit amet...","imgFile":"hoodie-ocean.png","_id":"P8IfTse9ADQ0X5dp"}
-{"serial":"17668899000080","title":"wheel wave","price":999,"shortDesc":"Unisex","longDesc":"Skate ipsum dolor sit amet...","imgFile":"wheel-wave.png","_id":"SuVdeJmNdHfBGOnC"}
-{"serial":"17389167008890","title":"wheel rocket","price":999,"shortDesc":"Unisex","longDesc":"Skate ipsum dolor sit amet...","imgFile":"wheel-rocket.png","_id":"nlJIEg2HIrrXd4pJ"}
-{"serial":"17389100887277","title":"hoodie ash","price":499,"shortDesc":"Unisex","longDesc":"Skate ipsum dolor sit amet...","imgFile":"hoodie-ash.png","_id":"oyI6J5ANBdCU84zo"}
+{"title":"wheel wave","price":999,"shortDesc":"Unisex","category":"board","longDesc":"Skate ipsum dolor sit amet...","imgFile":"wheel-wave.png","serial":"17668899000080","_id":"4nlc3q1xZQCaK5Y0"}
+{"title":"wheel rocket","price":999,"shortDesc":"Unisex","category":"board","longDesc":"Skate ipsum dolor sit amet...","imgFile":"wheel-rocket.png","serial":"17389167008890","_id":"5ORJwe2vtWULtbd3"}
+{"title":"skateboard generic","price":2999,"shortDesc":"Unisex","category":"board","longDesc":"Skate ipsum dolor sit amet...","imgFile":"skateboard-generic.png","serial":"66899433209756","_id":"EuQ7BsUkxIzoNdBa"}
+{"title":"wheel spinner","price":999,"shortDesc":"Unisex","category":"board","longDesc":"Skate ipsum dolor sit amet...","imgFile":"wheel-spinner.png","serial":"17389167008890","_id":"RPzbRmrF7J9D20SH"}
+{"title":"hoodie fire","price":499,"shortDesc":"Unisex","category":"board","longDesc":"Skate ipsum dolor sit amet...","imgFile":"hoodie-fire.png","serial":"17389167890128899","_id":"Sr9DTtRN5xtasT1o"}
+{"title":"Gretas Fury","price":2999,"shortDesc":"Unisex","category":"board","longDesc":"Skate ipsum dolor sit amet...","imgFile":"skateboard-greta.png","serial":"173891297371277","_id":"XPPJFkf5aesGDvIt"}
+{"title":"hoodie ocean","price":499,"shortDesc":"Unisex","category":"board","longDesc":"Skate ipsum dolor sit amet...","imgFile":"hoodie-ocean.png","serial":"17389167008890","_id":"XREruGMlJRQTxjiK"}
+{"title":"hoodie ash","price":499,"shortDesc":"Unisex","category":"board","longDesc":"Skate ipsum dolor sit amet...","imgFile":"hoodie-ash.png","serial":"17389100887277","_id":"ydqytloJIbklSkhd"}
